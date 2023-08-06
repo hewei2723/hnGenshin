@@ -71,40 +71,25 @@ body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:16px;line
       "https://www.htu.edu.cn",//河南师范大学
       // 添加更多域名
     ];
-
-    // 获取上次访问的索引值，如果没有则默认为-1
     var lastVisitedIndex = parseInt(localStorage.getItem("lastVisitedIndex")) || -1;
-
-    // 生成一个随机的不同于上次的索引值
     var randomIndex;
     do {
       randomIndex = Math.floor(Math.random() * domainList.length);
     } while (randomIndex === lastVisitedIndex);
-
-    // 获取随机域名
     var randomDomain = domainList[randomIndex];
-
-    // 保存这次访问的索引值
     localStorage.setItem("lastVisitedIndex", randomIndex);
-
-    // 定义跳转延迟时间（单位：毫秒）
-    var delayTime = 3000; // 
-
-    // 延迟一定时间后跳转到目标域名
+    var delayTime = 3500; // 
     setTimeout(function() {
       window.location.href = randomDomain;
     }, delayTime);
  </script>
- 
-  <!-- 底部logo图片 -->
   <div style="text-align: center;">
-    <img src="logo/xxgc.png" alt="新乡工程学院">
-    <img src="logo/xxyxy.png" alt="新乡医学院">
-    <img src="logo/zzkj.png" alt="郑州科技学院">
+	<img src="logo/xxgc.png" alt="新乡工程学院">
+	<img src="logo/xxyxy.png" alt="新乡医学院">
+	<img src="logo/zzkj.png" alt="郑州科技学院">
 	<img src="logo/zzcj.png" alt="郑州财经学院">
-    <img src="logo/hnsf.png" alt="河南师范大学">
+	<img src="logo/hnsf.png" alt="河南师范大学">
 	<img src="logo/hnkj.png" alt="河南科技学院">
-	    <!-- 添加更多的logo图片 -->
   </div>
 </body>
 </html>
