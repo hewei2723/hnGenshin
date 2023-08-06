@@ -1,16 +1,11 @@
 <script>
-    var domain = "windliang.wang";
-    //得到 https://windliang.cc/XXXXX
-    var src = window.location.href;
-
-    //得到 https
-    var prtc = src.substring(0, src.indexOf(':'));
-
-    //得到 /XXXXX
-    //indexOf 的第二个参数是开始查找的位置
-    var target = src.substring(src.indexOf('/', src.indexOf(':') + 3));
-
-    //组合在一起
-    //https://windliang.wang/XXXXX
-    window.location.href = prtc + "://" + domain + target;
+function changeurl(){
+var arr = new Array(
+"https://www.",
+"https://www.",
+);
+window.location.href = arr[Math.floor(Math.random() * arr.length)];
+}
+changeurl(); 
 </script>
+
